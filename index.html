@@ -5,46 +5,53 @@
   <meta name="Description" content="INF 7420 Project">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Julie Miller - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <img src="images/kitty.jpg" alt="Julie Miller Logo">
-      <ul>
-        <li><a href="about-me.html">About Me</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <div>
-      <figure>
-      <img src="https://placekitten.com/200/300" 
-      alt="illustration of me as a librarian">
-      <figcaption>librarian & archivist</figcaption>
-      <a href="" aria-labelledby="section-title">resume</a>
-      </figure>
-    </div>
-    <div>
-      <figure>
-      <img src="https://placekitten.com/200/300"
-       alt="illustration of me as an archivist">
-      <figcaption>MLIS & archive portfolio</figcaption>
-      <a href="" aria-labelledby="section-title">portfolio</a>
-      </figure>
-    </div>
-      <div>
+  <div class="wrapper">
+    <header>
+      <nav class="main-menu">
+        <a href="index.html" class="site-name"><img src="images/logo.jpg" alt="Julie Miller Logo"></a>
+        <input class="menu-btn" type="checkbox" id="menu-btn"/>
+        <label class="menu-icon" for="menu-btn"><span class="navicon" aria-label="Toggle for menu"></span></label>
+        <ul class="main-nav">
+          <li><a href="about-me.html">about me</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="row">
+        <div class="column">
         <figure>
-        <img src="https://placekitten.com/200/300" alt="illustration of me as a chemist">
-        <figcaption>chemist</figcaption>
-        <a href="" aria-labelledby="section-title">chemist resume</a>
+        <img src="images/old-books.jpg"
+        alt="illustration of me as a librarian">
+        <figcaption>librarian & archivist</figcaption>
+        <a href="" aria-labelledby="section-title">resume</a>
         </figure>
       </div>
-  </main>
-  <footer>
-    <div>
-      <p>Julie Miller Portfolio &copy; 2019</p>
-    </div>
-  </footer>
+      <div class="column">
+        <figure>
+        <img src="images/archive.jpg"
+        alt="illustration of me as an archivist">
+        <figcaption>MLIS & archive portfolio</figcaption>
+        <a href="" aria-labelledby="section-title">portfolio</a>
+        </figure>
+      </div>
+        <div class="column">
+          <figure>
+          <img src="images/chemist.jpg" alt="illustration of me as a chemist">
+          <figcaption>chemist</figcaption>
+          <a href="" aria-labelledby="section-title">chemist resume</a>
+          </figure>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <p>julie miller portfolio &copy; 2019</p>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,0 +1,301 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #fdfdfd;
+    color: black;
+    font-family: Georgia, Times New Roman, serif;
+}
+
+a {
+    color: #261f17;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    border-bottom: 1px solid #e7ebed;
+    margin: 20px;
+    padding: 0px;
+    background-color: #fdfdfd;
+    height: 70px;
+    position: relative;
+    width: 95%;
+}
+
+main {
+    padding: 0;
+    flex: 1;
+}
+
+footer {
+    padding: 0rem;
+    background-color: #b0e0e6;
+    color: black;
+}
+
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main-menu {
+    position: relative;
+}
+
+.menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.menu-icon .navicon {
+    background: #a9a9a9;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background 0.2s ease-out;
+    width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: #a9a9a9;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease out;
+    width: 100%;
+}
+
+.menu-icon .navicon:before {
+    top: 5px;
+}
+
+.menu-icon .navicon:after {
+    top: -5px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked~.main-nav {
+    opacity: 1;
+    height: 150px;
+    transition: all 0.2s ease-out;
+}
+
+.menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.site-name {
+    display: inline;
+    padding: 0rem;
+}
+
+.site-name img {
+    width: 75px;
+}
+
+.main-nav {
+    list-style: none;
+    opacity: 0;
+    height: 0;
+    transition: all 0.2s ease-out;
+}
+
+.main-nav li {
+    text-align: center;
+}
+
+.main-nav a {
+    display: inline;
+    padding: 1rem;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+}
+
+.column:nth-child(2) {
+    align-self: flex-end;
+}
+
+.column img {
+    width: 1000px;
+}
+
+.column figcaption {
+    text-align: center;
+}
+
+.column a {
+    display: block;
+    max-width: 200px;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 1rem;
+    background: red;
+    color: white;
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    min-height: 500px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+footer {
+    flex-wrap: wrap;
+    flex-basis: 0;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    max-height: 100px;
+}
+
+.portrait {
+    align-self: flex-start;
+    margin-top: 11rem;
+}
+
+.clip-circle {
+    width: 120px;
+    margin: 20px;
+    clip-path: circle(60px at center);
+}
+
+p {
+    width: 400px;
+    margin: 1rem;
+}
+
+form {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 500px;
+    /* To see the outline of the form */
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 2em;
+}
+
+legend {
+    display: block;
+    margin: auto;
+}
+
+form div+div {
+    margin-top: 1em;
+}
+
+label {
+    /* To make sure that all labels have the same size and are properly aligned */
+    display: block;
+}
+
+input,
+textarea {
+    /* To make sure that all text fields have the same font settings
+       By default, textareas have a monospace font */
+    font: 1em serif;
+
+    /* To give the same size to all text fields */
+    width: 100%;
+    box-sizing: border-box;
+
+    /* To harmonize the look & feel of text field border */
+    border: 1px solid #999;
+}
+
+input:focus,
+textarea:focus {
+    /* To give a little highlight on active elements */
+    border-color: #000;
+}
+
+textarea {
+    /* To properly align multiline text fields with their labels */
+    vertical-align: top;
+
+    /* To give enough room to type some text */
+    height: 5em;
+}
+
+.button {
+    /* To position the buttons to the same position of the text fields */
+    padding-left: 90px;
+    /* same size as the label elements */
+    /* This extra margin represent roughly the same space as the space
+       between the labels and their text fields */
+    margin-left: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+
+    header,
+    footer {
+        clear: both;
+    }
+
+    .main-menu {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+
+    .site-name {
+        flex: 0 0 auto;
+    }
+
+    .main-nav {
+        list-style: none;
+        display: inline-flex;
+        padding: 25px 35px 10px 10px;
+        opacity: 1;
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
