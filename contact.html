@@ -21,7 +21,7 @@
       </nav>
     </header>
     <main>
-      <form action="/my-handling-form-page" method="post">
+      <form action="https://formspree.io/juliemiller111@gmail.com" method="post" data-validate>
       <fieldset>
         <legend>contact</legend>
         <label>first name:<br />
@@ -29,12 +29,12 @@
         <label>last name:<br />
         <input type="text" name="last name"  /></label><br />
         <label>email:<br />
-        <input type="text" name="email" /></label><br />
+        <input type="text" name="email" required/></label><br />
         <label>message:<br />
           </label>
-        <textarea name="message" cols="21" rows="4"></textarea>
-        <input type="submit" name="submit"
-        value="submit" />
+        <textarea name="message" cols="21" rows="4" required></textarea>
+        <input type="submit" name="submit" />
+        <!--value="submit"-->
       </fieldset>
      </form>
     </main>
@@ -44,5 +44,7 @@
         </div>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/validate@2.2.0/dist/validate.min.js"></script>
+  <script>validate.init();</script>
 </body>
 </html>
