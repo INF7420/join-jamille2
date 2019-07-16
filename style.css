@@ -1,322 +1,329 @@
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: #fdfdfd;
-    color: black;
-    font-family: Georgia, Times New Roman, serif;
+  background-color: #fdfdfd;
+  color: black;
+  font-family: Georgia, Times New Roman, serif;
 }
 
 a {
-    color: #261f17;
+  color: #261f17;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 header {
-    border-bottom: 1px solid #e7ebed;
-    margin: 20px;
-    padding: 0px;
-    background-color: #fdfdfd;
-    height: 70px;
-    position: relative;
-    width: 95%;
+  border-bottom: 1px solid #e7ebed;
+  margin: 20px;
+  padding: 0px;
+  background-color: #fdfdfd;
+  height: 70px;
+  position: relative;
+  width: 95%;
 }
 
 main {
-    padding: 0;
-    flex: 1;
+  padding: 0;
+  flex: 1;
 }
 
 footer {
-    padding: 0rem;
-    background-color: #b0e0e6;
-    color: black;
+  padding: 0rem;
+  background-color: #b0e0e6;
+  color: black;
 }
 
 .wrapper {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .main-menu {
-    position: relative;
+  position: relative;
 }
 
 .menu-icon {
-    cursor: pointer;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
+  cursor: pointer;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
 }
 
 .menu-icon .navicon {
-    background: #a9a9a9;
-    display: block;
-    height: 2px;
-    position: relative;
-    transition: background 0.2s ease-out;
-    width: 18px;
+  background: #a9a9a9;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
 }
 
 .menu-icon .navicon:before,
 .menu-icon .navicon:after {
-    background: #a9a9a9;
-    content: "";
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all 0.2s ease out;
-    width: 100%;
+  background: #a9a9a9;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease out;
+  width: 100%;
 }
 
 .menu-icon .navicon:before {
-    top: 5px;
+  top: 5px;
 }
 
 .menu-icon .navicon:after {
-    top: -5px;
+  top: -5px;
 }
 
 .menu-btn {
-    display: none;
+  display: none;
 }
 
-.menu-btn:checked~.main-nav {
-    opacity: 1;
-    height: 150px;
-    transition: all 0.2s ease-out;
+.menu-btn:checked ~ .main-nav {
+  opacity: 1;
+  height: 150px;
+  transition: all 0.2s ease-out;
 }
 
-.menu-btn:checked~.menu-icon .navicon {
-    background: transparent;
+.menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
 }
 
-.menu-btn:checked~.menu-icon .navicon:before {
-    transform: rotate(-45deg);
+.menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
 }
 
-.menu-btn:checked~.menu-icon .navicon:after {
-    transform: rotate(45deg);
+.menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
 }
 
-.menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
-.menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
-    top: 0;
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
 }
 
 .site-name {
-    display: inline;
-    padding: 0rem;
+  display: inline;
+  padding: 0rem;
 }
 
 .site-name img {
-    width: 75px;
+  width: 75px;
 }
 
 .main-nav {
-    list-style: none;
-    opacity: 0;
-    height: 0;
-    transition: all 0.2s ease-out;
+  list-style: none;
+  opacity: 0;
+  height: 0;
+  transition: all 0.2s ease-out;
 }
 
 .main-nav li {
-    text-align: center;
+  text-align: center;
 }
 
 .main-nav a {
-    display: inline;
-    padding: 1rem;
-    text-align: center;
+  display: inline;
+  padding: 1rem;
+  text-align: center;
 }
 
 .column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
 }
 
 .column:nth-child(2) {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .column img {
-    width: 1000px;
+  width: 1000px;
 }
 
 .column figcaption {
-    text-align: center;
+  text-align: center;
 }
 
 .column a {
-    display: block;
-    max-width: 200px;
-    text-align: center;
-    margin: 1rem auto;
-    padding: 1rem;
-    background: rgb(248, 246, 246);
-    border-style: ridge;
-    border-color: #b0e0e6;
-    color: rgb(209, 204, 204);
-    text-decoration: none;
+  display: block;
+  max-width: 200px;
+  text-align: center;
+  margin: 1rem auto;
+  padding: 1rem;
+  background: rgb(248, 246, 246);
+  border-style: ridge;
+  border-color: #b0e0e6;
+  color: rgb(109, 107, 107);
+  text-decoration: none;
 }
 
 .row {
-    display: flex;
-    min-height: 500px;
+  display: flex;
+  min-height: 500px;
 }
 
 .row::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 footer {
-    flex-wrap: wrap;
-    flex-basis: 0;
-    flex-grow: 1;
-    justify-content: flex-end;
-    padding: 1.5rem;
-    max-height: 100px;
+  flex-wrap: wrap;
+  flex-basis: 0;
+  flex-grow: 1;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  max-height: 100px;
 }
 
 .portrait {
-    align-self: flex-start;
-    margin-top: 6rem;
-    margin-right: 2rem;
+  align-self: flex-start;
+  margin-top: 6rem;
+  margin-right: 2rem;
 }
 
 .clip-circle {
-    width: 120px;
-    margin: 20px;
-    clip-path: circle(60px at center);
+  width: 120px;
+  margin: 20px;
+  clip-path: circle(60px at center);
 }
 
 blockquote {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: topx;
-    margin-inline-end: topx;
-    font-size: 2rem;
-    color: rgb(100, 98, 98);
-    padding-left: 0;
-    border-left: rgb(181, 222, 241) 5px solid;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: topx;
+  margin-inline-end: topx;
+  font-size: 2rem;
+  color: rgb(100, 98, 98);
+  padding-left: 0;
+  border-left: rgb(181, 222, 241) 5px solid;
 }
 
 h1 {
-    text-align: center;
-    color: rgb(61, 60, 60);
+  text-align: center;
+  color: rgb(61, 60, 60);
 }
 p {
-    width: 800px;
-    margin: 2rem;
-    line-height: 1.4em;
-    color: rgb(61, 60, 60);
+  width: 800px;
+  margin: 2rem;
+  line-height: 1.4em;
+  color: rgb(61, 60, 60);
 }
 
 form {
-    /* Just to center the form on the page */
-    margin: 0 auto;
-    width: 500px;
-    /* To see the outline of the form */
-    padding: 2em;
-    border: 1px solid #ccc;
-    border-radius: 2em;
+  /* Just to center the form on the page */
+  margin: 0 auto;
+  width: 500px;
+  /* To see the outline of the form */
+  padding: 3em;
+  border: 1px solid #ccc;
+  border-radius: 2em;
 }
 
 legend {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
 
-form div+div {
-    margin-top: 1em;
+form div + div {
+  margin-top: 1em;
 }
 
 label {
-    /* To make sure that all labels have the same size and are properly aligned */
-    display: block;
+  /* To make sure that all labels have the same size and are properly aligned */
+  display: block;
 }
 
 input,
 textarea {
-    /* To make sure that all text fields have the same font settings
+  /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
-    font: 1em serif;
+  font: 1em serif;
 
-    /* To give the same size to all text fields */
-    width: 100%;
-    box-sizing: border-box;
+  /* To give the same size to all text fields */
+  width: 100%;
+  box-sizing: border-box;
 
-    /* To harmonize the look & feel of text field border */
-    border: 1px solid #999;
+  /* To harmonize the look & feel of text field border */
+  border: 1px solid #999;
 }
 
 input:focus,
 textarea:focus {
-    /* To give a little highlight on active elements */
-    border-color: #000;
+  /* To give a little highlight on active elements */
+  border-color: #000;
 }
 
 textarea {
-    /* To properly align multiline text fields with their labels */
-    vertical-align: top;
+  /* To properly align multiline text fields with their labels */
+  vertical-align: top;
 
-    /* To give enough room to type some text */
-    height: 5em;
+  /* To give enough room to type some text */
+  height: 5em;
 }
 
 .button {
-    /* To position the buttons to the same position of the text fields */
-    padding-left: 90px;
-    /* same size as the label elements */
-    /* This extra margin represent roughly the same space as the space
+  /* To position the buttons to the same position of the text fields */
+  padding-left: 90px;
+  /* same size as the label elements */
+  /* This extra margin represent roughly the same space as the space
        between the labels and their text fields */
-    margin-left: 0.5em;
+  margin-left: 0.5em;
 }
 
 @media screen and (min-width: 768px) {
+  header,
+  footer {
+    clear: both;
+  }
 
-    header,
-    footer {
-        clear: both;
-    }
+  .main-menu {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    .main-menu {
-        display: flex;
-        justify-content: space-between;
-    }
+  .menu-icon {
+    display: none;
+  }
 
-    .menu-icon {
-        display: none;
-    }
+  .site-name {
+    flex: 0 0 auto;
+  }
 
-    .site-name {
-        flex: 0 0 auto;
-    }
+  .main-nav {
+    list-style: none;
+    display: inline-flex;
+    padding: 25px 35px 10px 10px;
+    opacity: 1;
+  }
 
-    .main-nav {
-        list-style: none;
-        display: inline-flex;
-        padding: 25px 35px 10px 10px;
-        opacity: 1;
-    }
+  main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+[type="submit"]:hover {
+  background: #60d8e7;
+}
 
-    main {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+.error-message {
+  margin-bottom: 1em;
+  color: rgb(243, 72, 172);
 }
