@@ -23,9 +23,9 @@ header {
   margin: 20px;
   padding: 0px;
   background-color: #fdfdfd;
-  height: 70px;
+  max-height: 70px;
   position: relative;
-  width: 95%;
+  max-width: 95%;
 }
 
 main {
@@ -63,7 +63,7 @@ footer {
   height: 2px;
   position: relative;
   transition: background 0.2s ease-out;
-  width: 18px;
+  max-width: 18px;
 }
 
 .menu-icon .navicon:before,
@@ -74,7 +74,7 @@ footer {
   height: 100%;
   position: absolute;
   transition: all 0.2s ease out;
-  width: 100%;
+  max-width: 100%;
 }
 
 .menu-icon .navicon:before {
@@ -118,7 +118,7 @@ footer {
 }
 
 .site-name img {
-  width: 75px;
+  max-width: 75px;
 }
 
 .main-nav {
@@ -136,11 +136,12 @@ footer {
   display: inline;
   padding: 1rem;
   text-align: center;
+  text-decoration: none;
 }
 
 .column {
   float: left;
-  width: 33.33%;
+  max-width: 33.33%;
   padding: 10px;
 }
 
@@ -196,7 +197,7 @@ footer {
 }
 
 .clip-circle {
-  width: 120px;
+  max-width: 120px;
   margin: 20px;
   clip-path: circle(60px at center);
 }
@@ -218,7 +219,7 @@ h1 {
   color: rgb(61, 60, 60);
 }
 p {
-  width: 800px;
+  max-width: 800px;
   margin: 2rem;
   line-height: 1.4em;
   color: rgb(61, 60, 60);
@@ -227,11 +228,12 @@ p {
 form {
   /* Just to center the form on the page */
   margin: 0 auto;
-  width: 500px;
+  max-width: 500px;
   /* To see the outline of the form */
   padding: 3em;
   border: 1px solid #ccc;
   border-radius: 2em;
+
 }
 
 legend {
@@ -252,10 +254,10 @@ input,
 textarea {
   /* To make sure that all text fields have the same font settings
        By default, textareas have a monospace font */
-  font: 1em serif;
+  font: 2em serif;
 
   /* To give the same size to all text fields */
-  width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
@@ -327,3 +329,26 @@ textarea {
   margin-bottom: 1em;
   color: rgb(243, 72, 172);
 }
+
+.course-table {
+  max-width: 40%;
+}
+
+table {
+  table-layout: fixed;
+  max-width: 100%;
+  border-collapse: collapse;
+  padding: 2px 25px;
+}
+
+th, td {
+  letter-spacing: 1px;
+text-align: left;
+vertical-align: middle;
+height: 50px;
+border-bottom: 1px solid #ddd;
+}
+
+tr:hover {background-color: #dbf0ee;}
+
+
