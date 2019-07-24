@@ -257,7 +257,7 @@ textarea {
   font: 2em serif;
 
   /* To give the same size to all text fields */
-  max-width: 100%;
+  width: 100%;
   box-sizing: border-box;
 
   /* To harmonize the look & feel of text field border */
